@@ -1,8 +1,11 @@
 import { createContext } from 'react';
+import { PopoverProps } from '@radix-ui/react-popover';
+
+export type MyPopoverProps = Omit<PopoverProps, 'onOpenChange'>;
 
 export type PopoverContextState = {
-  open: boolean;
-  setOpen: (state: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: (state: boolean) => void;
 };
 
 export const PopoverContext = createContext({} as PopoverContextState);
