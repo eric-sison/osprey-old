@@ -7,17 +7,17 @@ import { MyPopoverProps, PopoverContext } from '../../utils/popover';
 /**
  * Abstraction component for Popover.Root
  */
-export const Popover: FunctionComponent<MyPopoverProps> = ({ children, defaultOpen, modal, open }) => {
+export const Popover: FunctionComponent<MyPopoverProps> = ({ children, defaultOpen, modal, open = false }) => {
   /**
    * initialize state to listen to the current open state of Popover.Root
    * expose this state via context so that it can be consumed by the Popover.Content
    */
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(open);
 
   return (
     <Root
       // assign Popover.Root props
-      open={open}
+      open={isOpen}
       defaultOpen={defaultOpen}
       modal={modal}
       onOpenChange={(state) => setIsOpen(state)}
@@ -45,7 +45,7 @@ export const PopoverContent = forwardRef<ElementRef<typeof Content>, ComponentPr
             <Content
               {...props}
               ref={forwardedRef}
-              className="bg-white rounded-md px-3 py-2 shadow-xl"
+              className="bg-white rounded-md px-3 py-2 shadow-xl focus:outline-none"
               forceMount
               asChild
             >
