@@ -1,7 +1,11 @@
-import { createContext } from 'react';
-import { PopoverProps } from '@radix-ui/react-popover';
+import { ComponentPropsWithoutRef, createContext } from 'react';
+import { PopoverProps, Content } from '@radix-ui/react-popover';
 
-export type MyPopoverProps = Omit<PopoverProps, 'onOpenChange'>;
+export type PopupProps = Omit<PopoverProps, 'onOpenChange'>;
+
+export type PopupContentProps = ComponentPropsWithoutRef<typeof Content> & {
+  arrow?: { width: number; height: number };
+};
 
 type PopupContextState = {
   isOpen: boolean;

@@ -1,21 +1,16 @@
-import { Trigger, Close, Arrow, Anchor } from '@radix-ui/react-popover';
+import { Trigger, Anchor, Close } from '@radix-ui/react-popover';
 
 /**
- * export primitive trigger as PopoverTrigger
+ * export primitive close as PopupClose
+ */
+export const PopupClose = Close;
+
+/**
+ * export primitive trigger as PopupTrigger
  */
 export const PopupTrigger = Trigger;
 
 /**
- * export primitive anchor as PopoverAnchor
+ * export primitive anchor as PopupAnchor
  */
 export const PopupAnchor = Anchor;
-
-/**
- * export primitve arrow as PopoverArrow
- */
-export const PopupArrow = Arrow;
-
-/**
- * export primitive close as PopoverClose
- */
-export const PopupClose = Close;
