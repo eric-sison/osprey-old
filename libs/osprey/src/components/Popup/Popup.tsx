@@ -69,8 +69,8 @@ export const PopupContent = forwardRef<HTMLDivElement, PopupContentProps>(
             <Content
               {...props}
               ref={forwardedRef}
-              className={`${className} px-4 py-3 bg-white rounded-md shadow-xl shadow-slate-200 focus:outline-none dark:bg-zinc-800 dark:text-zinc-200 dark:shadow-none`}
               asChild
+              className={`${className} px-4 py-3 bg-white rounded-md shadow-xl shadow-slate-200 focus:outline-none dark:bg-zinc-800 dark:text-zinc-200 dark:shadow-none`}
             >
               <motion.div
                 animate="visible"
