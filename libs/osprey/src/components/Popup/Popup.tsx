@@ -1,12 +1,35 @@
 import { forwardRef } from 'react';
-import { Root, Portal, Content, Arrow } from '@radix-ui/react-popover';
+import { Root, Portal, Content, Arrow, Close, Trigger, Anchor } from '@radix-ui/react-popover';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FunctionComponent, useContext, useState } from 'react';
-import { PopupProps, PopupContext, PopupContentProps } from '../../utils/popover';
+import { PopupProps, PopupContext, PopupContentProps } from './types';
 import { styles } from './Popup.styles';
 
 /**
+ * export primitive close as PopupClose
+ */
+export const PopupClose = Close;
+
+/**
+ * export primitive trigger as PopupTrigger
+ */
+export const PopupTrigger = Trigger;
+
+/**
+ * export primitive anchor as PopupAnchor
+ */
+export const PopupAnchor = Anchor;
+
+/**
  * Abstraction component for Popover.Root
+ * - A popup is a layer that appears above all other content on the page.
+ * - It provides additional information about an action.
+ *
+ * @example
+ * <Popup>
+ *    <PopupTrigger>Open Popup</PopupTrigger>
+ *    <PopupContent>The quick brown fox jumps over a lazy dog near the riverbanks.</PopupContent>
+ * </Popup>
  */
 export const Popup: FunctionComponent<PopupProps> = ({ children, defaultOpen, modal, open = false }) => {
   /**
