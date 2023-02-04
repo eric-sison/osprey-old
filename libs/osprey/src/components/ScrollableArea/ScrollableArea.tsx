@@ -3,8 +3,11 @@ import { Root, Viewport, Corner, ScrollAreaScrollbar, ScrollAreaThumb } from '@r
 import { styles } from './ScrollableArea.style';
 
 /**
- * @example
+ * - "Augments native scroll functionality for custom, cross-browser styling" - from radix-ui official docs
+ * - This component is using radix-ui's ScrollArea primitive for out-of-the-box accessibility.
+ * - Please visit their official website documentation to learn more: https://www.radix-ui.com/docs/primitives/components/scroll-area
  *
+ * @example
  * <ScrollableArea>
  *    A scroll thumb will show the moment this content overflows.
  *    Note that for an area to be scrollable, the ScrollableArea's parents

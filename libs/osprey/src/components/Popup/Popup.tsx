@@ -21,9 +21,10 @@ export const PopupTrigger = Trigger;
 export const PopupAnchor = Anchor;
 
 /**
- * Abstraction component for Popover.Root
  * - A popup is a layer that appears above all other content on the page.
  * - It provides additional information about an action.
+ * - This component is using radix-ui's Popover primitive for out-of-the-box accessibility.
+ * - Please visit their official website documentation to learn more: https://www.radix-ui.com/docs/primitives/components/popover
  *
  * @example
  * <Popup>

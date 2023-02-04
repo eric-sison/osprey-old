@@ -12,7 +12,6 @@ export const styles = {
     }),
 
   motionDiv: (size: ModalSize) => {
-    console.log(size);
     return cx('bg-white text-midnight-700 flex flex-col dark:bg-midnight-800 dark:text-midnight-200', {
       'rounded-md': size !== 'full',
     });

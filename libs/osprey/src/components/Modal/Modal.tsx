@@ -1,4 +1,4 @@
-import { Root, DialogProps, Content, Portal, Overlay, Trigger } from '@radix-ui/react-dialog';
+import { Root, DialogProps, Content, Portal, Overlay, Trigger, Close } from '@radix-ui/react-dialog';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ElementRef, forwardRef, FunctionComponent, useContext, useState } from 'react';
 import { ModalContentComposition, ModalCompositionProps, ModalContentProps, ModalContext } from './types';
@@ -13,10 +13,17 @@ import { ScrollableArea } from '../ScrollableArea';
 export const ModalTrigger = Trigger;
 
 /**
+ * Copy Dialog.Close as ModalClose
+ *
+ * This component is used to close the modal
+ */
+export const ModalClose = Close;
+
+/**
  *
  * - A component in which users cannot interact with your application until it is closed.
  * - Interrupt the user’s attention and halt all other actions until a message is dealt with or dismissed.
- * - This component is using radix-ui's Dialog for out-of-the-box accessibility.
+ * - This component is using radix-ui's Dialog primitive for out-of-the-box accessibility.
  * - Please visit their official website documentation to learn more: https://www.radix-ui.com/docs/primitives/components/dialog
  *
  * @example
@@ -26,7 +33,7 @@ export const ModalTrigger = Trigger;
  *       <ModalContent.Title>My Title</ModalContent.Title>
  *       <ModalContent.Body>The quick brown fox jumps over a lazy dog near the riverbanks.</ModalContent.Body>
  *       <ModalContent.Footer>
- *          <button onClick={() => doSomething()}>Okay</button>
+ *          <ModalClose>Okay</ModalClose>
  *       </ModalContent.Footer>
  *    </ModalContent>
  * <Modal />

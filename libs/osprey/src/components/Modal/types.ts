@@ -27,7 +27,7 @@ export type ModalContentComposition<T> = ForwardRefExoticComponent<
 export type ModalContentProps = ComponentPropsWithoutRef<typeof Content> & {
   fixedHeight?: boolean;
   center?: boolean;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  size?: ModalSize;
 };
 
 /**
